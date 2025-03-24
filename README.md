@@ -22,6 +22,10 @@ I have chosen TypeScript on Bun.js for the project.
 The code can be inspected starting from the function `findRepeatingChars` in `utils/string.ts`.
 Comments were added to explain the rationale.
 
+It is tested. You can run tests via:
+
+```npm run test```
+
 I like to write most functions as units.
 They are small, pure, deterministic (can be unit tested with no need for mocks), moveable, composable and reusable.
 
