@@ -24,6 +24,11 @@ export const findRepeatingChars = (input: string): string[] => {
     The map is at most as big (keys-wise) as the list of unique available characters, therefore it will not
     grow much even in the worst case. It will have an upper limit in the hundreds for an ASCII charset
     or thousands for a UTF charset.
+
+    Note: we could have used the output array directly but before every push we would have had to
+    check all the array if the char we were trying to add was there already or not, and that takes M time.
+    This would have changed the time complexity to O(N) + O(N * M) = O(N * M), saving only a little memory compared
+    to the use of an intermediate map that instead have instant O(1) access time.
     */
 	const occurrences: Record<string, number> = {};
 
